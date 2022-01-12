@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wbpack Exercise</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>To do List</title>
 </head>
 <body>
-    <h1>Hello webpack!</h1>
+    <header>
+        <h2>To do List</h2>
+    </header>
+    <div class="container">
+        <div class="title">
+            <h4>Today's To Do</h4>
+            <button><i class="fa fa-refresh" aria-hidden="true"></i></button>
+        </div>
+        <div class="add-list">
+            <input type="text" name="add" id="add-todo" placeholder="Add your list here...">
+            <button class="add"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+        </div>
+        <div class="list-items">
+            <input type="checkbox" class="check"> 
+            <input type="text" id="todo-lists">
+            <button class="view"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+            <button class="delete"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+        </div>
+        <div class="list-items">
+            <input type="checkbox" class="check"> 
+            <input type="text" id="todo-lists">
+            <button class="view"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+            <button class="delete"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+        </div>
+        <div class="complete-task">
+            <button class="complete">Clear all completed</button>
+        </div>
+    </div>
 </body>
 </html>
