@@ -20,7 +20,8 @@ body {
   padding: 0 10px;
 }
 
-.add-list,.list-items {
+.add-list,
+.list-items {
   display: flex;
   border-bottom: 1px solid gray;
   height: 35px;
