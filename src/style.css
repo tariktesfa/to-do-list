@@ -17,11 +17,10 @@ body {
   border-bottom: 1px solid gray;
   display: flex;
   justify-content: space-between;
-  padding: 0px 10px;
+  padding: 0 10px;
 }
 
-.add-list, 
-.list-items {
+.add-list,.list-items {
   display: flex;
   border-bottom: 1px solid gray;
   height: 35px;
@@ -65,4 +64,3 @@ input:focus {
 h2 {
   text-align: center;
 }
-

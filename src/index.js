@@ -26,7 +26,7 @@ const tasks = [
 ];
 
 const populateTasks = () => {
-  tasks.forEach((lists) => {
+  tasks.sort((a, b) => a.index - b.index).forEach((lists) => {
     const taskListDiv = document.createElement('div');
     taskListDiv.classList.add('list-items');
     taskListDiv.id = lists.index;
