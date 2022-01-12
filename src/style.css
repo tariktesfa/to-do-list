@@ -1,3 +1,67 @@
 body {
-  background-color: bisque;
+  background-color: rgb(247, 245, 244);
+}
+
+.container {
+  background-color: #fff;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px auto;
+  border-radius: 5px;
+  box-shadow: 5px 5px rgb(240, 233, 233);
+}
+
+.title {
+  border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.add-list,
+.list-items {
+  display: flex;
+  border-bottom: 1px solid gray;
+  height: 35px;
+  padding: 10px;
+}
+
+.add-list input {
+  border: none;
+  flex-grow: 5;
+}
+
+#todo-lists {
+  flex-grow: 4;
+  border: none;
+}
+
+button {
+  border: none;
+  background-color: #fff;
+}
+
+.delete {
+  display: none;
+}
+
+.check {
+  margin: 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.complete {
+  height: 60px;
+  width: 100%;
+  background-color: #f7f5f4;
+  font-size: 16px;
+}
+
+h2 {
+  text-align: center;
 }
