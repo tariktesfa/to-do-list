@@ -49,8 +49,8 @@ const onSubmit = () => {
   };
 
   todoList.data.push(newItem);
-  updateStorage(todoList.data);
   addTask(newItem, todoList.data.length - 1);
+  updateStorage(todoList.data);
   addTodoInput.value = '';
   addTodoInput.focus();
 };

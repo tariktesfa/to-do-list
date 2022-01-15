@@ -1,6 +1,6 @@
 const updateStorage = (newList) => {
   newList.forEach((value, id) => {
-    value.index = id;
+    value.index = id + 1;
   });
   localStorage.setItem('todo', JSON.stringify(newList));
 };
