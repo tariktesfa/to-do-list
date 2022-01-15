@@ -1,4 +1,5 @@
 import { todoList, updateStorage } from './functions.js';
+import taskCompleted from './compeletedTask.js';
 
 const taskContainer = document.querySelector('.list-container');
 
@@ -10,14 +11,6 @@ const deleteTask = (taskListDiv) => {
 
 const updateTask = (id, newValue) => {
   todoList.data[parseInt(id, 10)].description = newValue;
-  updateStorage(todoList.data);
-};
-
-const taskCompleted = (e, id, inputBox) => {
-  todoList.data[parseInt(id, 10)].completed = e.currentTarget.checked;
-  inputBox.style.textDecoration = (e.currentTarget.checked && 'line-through') || 'none';
-  inputBox.style.color = (e.currentTarget.checked && 'gray') || 'black';
-  inputBox.disabled = e.currentTarget.checked;
   updateStorage(todoList.data);
 };
 
@@ -91,6 +84,5 @@ export {
   updateTask,
   deleteTask,
   onSubmit,
-  taskCompleted,
   deleteCompleted,
 };
