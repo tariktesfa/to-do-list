@@ -13,6 +13,14 @@ const updateTask = (id, newValue) => {
   updateStorage(todoList.data);
 };
 
+const taskCompleted = (e, id, inputBox) => {
+  todoList.data[parseInt(id, 10)].completed = e.currentTarget.checked;
+  inputBox.style.textDecoration = (e.currentTarget.checked && 'line-through') || 'none';
+  inputBox.style.color = (e.currentTarget.checked && 'gray') || 'black';
+  inputBox.disabled = e.currentTarget.checked;
+  updateStorage(todoList.data);
+};
+
 const addTask = (lists) => {
   const taskListDiv = document.createElement('div');
   taskListDiv.classList.add('list-items');
@@ -25,6 +33,7 @@ const addTask = (lists) => {
 
   const inputBox = taskListDiv.querySelector('#todo-lists');
   const deleteBtn = taskListDiv.querySelector('.delete');
+  const checkBox = taskListDiv.querySelector('.check');
 
   inputBox.addEventListener('change', (e) => {
     updateTask(taskListDiv.id, e.currentTarget.value);
@@ -32,6 +41,17 @@ const addTask = (lists) => {
 
   deleteBtn.addEventListener('click', () => {
     deleteTask(taskListDiv);
+  });
+
+  inputBox.value = lists.description;
+  inputBox.style.textDecoration = (lists.completed && 'line-through') || 'none';
+  inputBox.style.color = (lists.completed && 'gray') || 'black';
+  inputBox.disabled = lists.completed;
+
+  checkBox.checked = lists.completed;
+
+  checkBox.addEventListener('change', (e) => {
+    taskCompleted(e, taskListDiv.id, inputBox);
   });
 
   taskContainer.appendChild(taskListDiv);
@@ -60,4 +80,5 @@ export {
   updateTask,
   deleteTask,
   onSubmit,
+  taskCompleted,
 };
