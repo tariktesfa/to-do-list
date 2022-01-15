@@ -75,10 +75,22 @@ const onSubmit = () => {
   addTodoInput.focus();
 };
 
+const deleteCompleted = () => {
+  const notCompletedList = todoList.data.filter((i) => !i.completed);
+  todoList.data
+    .filter((item) => item.completed)
+    .map((item) => document.querySelectorAll('div.list-items')[item.index])
+    .map((element) => element.remove());
+  todoList.data = notCompletedList;
+  updateStorage(todoList.data);
+  taskContainer.querySelectorAll('.list-items').forEach((item, id) => { item.id = id; });
+};
+
 export {
   addTask,
   updateTask,
   deleteTask,
   onSubmit,
   taskCompleted,
+  deleteCompleted,
 };
