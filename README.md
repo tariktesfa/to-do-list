@@ -4,7 +4,7 @@ It is a To Do List on which the user can add, delete and edit task to be complet
 
 ### Screenshot
 
-![todo](https://user-images.githubusercontent.com/38283436149143676-2d9db819-800c-418c-9bce-5aa114c7adb3.PNG)
+![todo](https://user-images.githubusercontent.com/38283436/149611074-331c04d0-25de-4338-a348-049cacbdcc32.PNG)
 
 ## Built With
 
