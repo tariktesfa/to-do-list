@@ -6,6 +6,10 @@ It is a To Do List on which the user can add, delete and edit task to be complet
 
 ![todo](https://user-images.githubusercontent.com/38283436/149611074-331c04d0-25de-4338-a348-049cacbdcc32.PNG)
 
+## Live Demo
+
+[Live demo](https://tariktesfa.github.io/to-do-list/dist/)
+
 ## Built With
 
 - HTML
